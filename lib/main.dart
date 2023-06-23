@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:robotics/Home_Page.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  // SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   runApp(const Robotronics_App());
 }
 
@@ -102,7 +105,10 @@ class _Login_PageState extends State<Login_Page> {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacement((context),
+                    MaterialPageRoute(builder: (context) => Home_Page()));
+              },
               child: Text(
                 "Login",
                 style: TextStyle(
